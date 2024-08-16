@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         body {
+            background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .card {
+            background: linear-gradient(to bottom, #6a11cb, #2575fc);
+            color: #333;
+        }
+        .result{
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Loan Calculator</h1>
+        <div class="card p-4 text-white">
+            <form id="loan-form">
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Loan Amount</label>
+                    <input type="number" class="form-control" id="amount" placeholder="Enter loan amount">
+                </div>
+                <div class="mb-3">
+                    <label for="interest" class="form-label">Interest Rate (%)</label>
+                    <input type="number" class="form-control" id="interest" placeholder="Enter interest rate">
+                </div>
+                <div class="mb-3">
+                    <label for="years" class="form-label">Years to Repay</label>
+                    <input type="number" class="form-control" id="years" placeholder="Enter years to repay">
+                </div>
+                <button type="button" class="btn btn-success btn-block" onclick="calculateLoan()">Calculate</button>
+            </form>
+        </div>
+        <div class="mt-4 p-4 border result">
+            <h4>Results</h4>
+            <div id="results">
+                <p>Monthly Payment: <span id="monthly-payment"></span></p>
+                <p>Total Payment: <span id="total-payment"></span></p>
+                <p>Total Interest: <span id="total-interest"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
